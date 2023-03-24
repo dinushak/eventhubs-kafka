@@ -1,0 +1,24 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.1.1",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "methods": [
+        "get"
+      ],
+      "authLevel": "anonymous",
+      "name": "req"
+    },
+    {
+      "type": "eventHub",
+      "connection": "EventHubConnectionAppSetting",
+      "eventHubName": "kafkatest",
+      "name": "$return",
+      "direction": "out"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Producer.dll",
+  "entryPoint": "PerthAzure.Function.EventHubProducerTrigger.Run"
+}
